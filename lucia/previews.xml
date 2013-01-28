@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<previews>
+
+    <preview
+        name="Config1"
+        config="layout-sw360dp-w360dp-h640dp-normal-long-port-notnight-xhdpi-finger-keyssoft-nokeys-navhidden-nonav-1280x720-v14"
+        device="4.7in WXGA"
+        devicestate="Portrait"
+        target="Android 4.0"
+        theme="@android:style/Theme.Holo" >
+    </preview>
+
+</previews>
