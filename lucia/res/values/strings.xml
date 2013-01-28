@@ -3,15 +3,6 @@
 <resources>
 
     <string name="app_name">ルキア</string>
-    <string name="location">地域名：</string>
-    <string name="sec">明滅秒数</string>
-    
-    <string-array name="hotaru_name_array">
-        <item>ゲンジボタル</item>
-        <item>ヘイケボタル(開発中)</item>
-        <item>ヒメボタル(開発中)</item>
-    </string-array>
-    <string name="send">データ送信</string>
     <string name="credit">ホタル写真　\n大場蛍研究所\n　大場　信義</string>
     
 </resources>

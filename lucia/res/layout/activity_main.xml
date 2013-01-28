@@ -15,35 +15,39 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="313dp" >
-
+        
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/imageView2"
+            android:layout_alignTop="@+id/imageView2"
             android:src="@drawable/hotaru_pic_base" />
 
-        <ImageView
-            android:id="@+id/imageView4"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:text="@string/credit" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
             android:src="@drawable/light" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:src="@drawable/hotaru_pic_top" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="28dp"
-            android:text="@string/credit"
-            android:textColor="@color/credit_font"
-            android:textSize="@dimen/credit_font_size" />
         
     </RelativeLayout>
 
@@ -59,11 +63,5 @@
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
 
 </LinearLayout>
