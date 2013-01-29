@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
     <string name="app_name">ルキア</string>
     <string name="credit">ホタル写真　\n大場蛍研究所\n　大場　信義</string>
     
+    <string name="pref_title">ルキア設定</string>
+    <string name="list_title">ホタルの種類選択</string>
+    <string name="list_summary">ホタルの種類を選びます</string>
+
 </resources>
