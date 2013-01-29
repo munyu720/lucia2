@@ -2,7 +2,9 @@ package com.munyu.lucia;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -22,6 +23,12 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		// テキストビューの初期設定
+		final TextView textView1 = (TextView) findViewById(R.id.textView1);
+        textView1.setText(sharedPref.getString("list_key", ""));
+		
 		// Tweenアニメーションの適用
 		// 初期状態のアニメーションを表示
 		final ImageView img = (ImageView) findViewById(R.id.imageView3);
@@ -29,7 +36,7 @@ public class MainActivity extends Activity {
 		img.startAnimation(animation);
 		
 		// テキストビューの初期設定
-		final TextView textView = (TextView) findViewById(R.id.textView2);
+		final TextView textView2 = (TextView) findViewById(R.id.textView2);
 		
 		// シークバーの設定
 		// 変更後に明滅間隔を変更
@@ -37,9 +44,10 @@ public class MainActivity extends Activity {
         seekBar.setMax(100);
         seekBar.setProgress(50);
         // テキストビューのテキストを設定します
-        textView.setText(String.valueOf((seekBar.getProgress()*30.00)/1500)+"秒に1回点滅");
+        textView2.setText(String.valueOf((seekBar.getProgress()*30.00)/1500)+"秒に1回点滅");
         seekBar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-            // トラッキング開始時に呼び出されます
+           
+        	// トラッキング開始時に呼び出されます
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 Log.v("onStartTrackingTouch()",
@@ -58,12 +66,23 @@ public class MainActivity extends Activity {
                     String.valueOf(seekBar.getProgress()));
                 animation.setDuration((long) ((seekBar.getProgress()*30)/1.5));
              // テキストビューのテキストを設定します
-                textView.setText(String.valueOf((seekBar.getProgress()*30.00)/1500)+"秒に1回点滅");
+                textView2.setText(String.valueOf((seekBar.getProgress()*30.00)/1500)+"秒に1回点滅");
                 img.startAnimation(animation);
             }
             
         });
 	}
+	
+	@Override  
+	protected void onResume() {  
+	    super.onResume();  
+		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		// テキストビューの初期設定
+		final TextView textView1 = (TextView) findViewById(R.id.textView1);
+        textView1.setText(sharedPref.getString("list_key", ""));
+	}  
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -76,16 +95,10 @@ public class MainActivity extends Activity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch(item.getItemId()){
 		case R.id.menuitem1:
-			showMessage("Hello! Item1");
 	        startActivity(new Intent(this, MyPreferences.class));
 			return true;
 		}
 		return false;
 	}
 	
-	protected void showMessage(String msg){
-		Toast.makeText(
-			this, 
-			msg, Toast.LENGTH_SHORT).show();
-	}
 }

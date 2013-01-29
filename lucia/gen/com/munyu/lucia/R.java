@@ -29,7 +29,7 @@ public final class R {
         public static final int imageView3=0x7f0a0003;
         public static final int menuitem1=0x7f0a0006;
         public static final int seekBar1=0x7f0a0004;
-        public static final int spinner1=0x7f0a0000;
+        public static final int textView1=0x7f0a0000;
         public static final int textView2=0x7f0a0005;
     }
     public static final class layout {

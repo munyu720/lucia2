@@ -6,8 +6,8 @@
             <item>ヒメボタル</item>
         </string-array>
         <string-array name="list_entryvalues">
-            <item>1</item>
-            <item>2</item>
-            <item>3</item>
+            <item>ゲンジボタル</item>
+            <item>ヘイケボタル</item>
+            <item>ヒメボタル</item>
         </string-array>
 </resources>
