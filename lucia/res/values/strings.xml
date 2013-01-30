@@ -2,9 +2,16 @@
 <resources>
     <string name="app_name">ルキア</string>
     <string name="credit">ホタル写真　\n大場蛍研究所\n　大場　信義</string>
+
     
     <string name="pref_title">表示データ設定</string>
     <string name="list_title">ホタルの種類選択</string>
     <string name="list_summary">表示をしたいホタルの種類を選んでください</string>
 
+    <string name="meimetu_sec_title">初期明滅秒数</string>
+    <string name="meimetu_sec_summary">ホタルの明滅間隔の秒数の初期値を設定します</string>
+    
+    <string name="seek_sec_title">調整幅設定</string>
+    <string name="seek_sec_summary">ホタルの明滅秒数を設定する時の変更可能秒数を設定します</string>
+    
 </resources>

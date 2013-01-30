@@ -23,6 +23,6 @@
             </intent-filter>
         </activity>
         <activity android:name="MyPreferences"></activity>
-    </application>
+        </application>
 
 </manifest>
