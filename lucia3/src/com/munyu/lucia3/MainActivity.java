@@ -1,4 +1,4 @@
-package com.munyu.lucia;
+package com.munyu.lucia3;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,9 +16,8 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-public class MainActivity extends Activity
+public class MainActivity extends Activity 
 				implements OnSeekBarChangeListener{
-	
 	SharedPreferences sharedPref;  
 	TextView textView1;
 	SeekBar seekBar ;
