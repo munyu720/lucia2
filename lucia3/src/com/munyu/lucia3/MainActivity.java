@@ -16,6 +16,7 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
+
 public class MainActivity extends Activity 
 				implements OnSeekBarChangeListener{
 	SharedPreferences sharedPref;  

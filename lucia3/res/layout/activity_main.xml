@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="ContentDescription" >
+    
 
     <TextView
         android:id="@+id/textView1"
